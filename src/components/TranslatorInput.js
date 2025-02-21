@@ -1,6 +1,5 @@
 import copyImage from '../assets/Copy.svg';
 import sound from '../assets/sound_max_fill.svg';
-import sortAlfa from '../assets/Sort_alfa.svg';
 import expandDown from '../assets/Expand_down.svg';
 
 function TranslatorInput({
@@ -38,7 +37,6 @@ function TranslatorInput({
           value={translatorInput}
           onChange={(e) => setTranslatorInput(e.target.value)}
         />
-        <span>{`${translatorInput.length}/500`}</span>
       </div>
       <div className="action-buttons">
         <button
@@ -55,10 +53,7 @@ function TranslatorInput({
         >
           <img src={copyImage} alt="copy text" />
         </button>
-        <button className="translate-btn btn-hover">
-          <img src={sortAlfa} alt="sort alfa" />
-          Translate
-        </button>
+        <span className="text-length">{`${translatorInput.length}/500`}</span>
       </div>
     </div>
   );
