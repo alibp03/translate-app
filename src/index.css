@@ -1,13 +1,245 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+html {
+  font-size: 62.5%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+main {
+  position: relative;
+}
+
+.br2 {
+  border-radius: 2rem;
+}
+
+.background {
+  position: relative;
+}
+
+.bg-image {
+  display: block;
+  width: 100%;
+}
+
+.bg-color {
+  background-color: #040711;
+  height: 50rem;
+}
+
+.logo-image {
+  position: absolute;
+  top: 10rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.traslator-section {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  top: 20rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140rem;
+  height: 33rem;
+}
+
+.translator-input {
+  display: grid;
+  grid-template-rows: 4.2rem 1px 1fr 4.2rem;
+  gap: 1rem;
+  background-color: #212936cc;
+  padding: 2rem 2.4rem;
+  border: 1px solid #4d5562;
+}
+
+.languages {
+  display: flex;
+  gap: 1.6rem;
+  padding: 0.5rem 1rem;
+}
+
+.btn {
+  color: #d2d5da;
+  background-color: transparent;
+  border: none;
+  font-size: 1.4rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 1rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  /* font-weight: 700; */
+}
+
+.active {
+  color: #f9fafb;
+  background-color: #4d5562;
+}
+
+.expand-down {
+  cursor: pointer;
+  width: 2.2rem;
+  margin-left: -1.2rem;
+}
+
+.select {
+  color: #d2d5da;
+  /* color: #f9fafb; */
+  background-color: transparent;
+  border: none;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+}
+
+.line {
+  height: 1px;
+  background-color: #394150;
+}
+
+.input-box {
+  display: grid;
+  grid-template-rows: 1fr 2rem;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
+}
+
+.text-input {
+  /* height: 12rem; */
+  color: #f9fafb;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+}
+
+.input-box span {
+  color: #d2d5da;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  align-self: end;
+  justify-self: end;
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 0.5rem;
+  border: 2px solid #4d5562;
+  border-radius: 1rem;
+  transition: all 0.3s;
+}
+
+.translate-btn {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  cursor: pointer;
+  font-size: 1.4rem;
+  /* font-weight: 600; */
+  color: #f9fafb;
+  background-color: #263fa9;
+  padding: 0.8rem 2rem;
+  border: 0.5px solid #7ca9f3;
+  border-radius: 1rem;
+  transition: all 0.3s;
+}
+
+.translator-output {
+  display: grid;
+  grid-template-rows: 4.2rem 1px 1fr 4.2rem;
+  gap: 1rem;
+  background-color: #121826cc;
+  padding: 2rem 2.4rem;
+  border: 1px solid #4d5562;
+}
+
+.swap-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  padding: 0.5rem;
+  border: 2px solid #4d5562;
+  border-radius: 1rem;
+  cursor: pointer;
+  margin-left: auto;
+  transition: all 0.3s;
+}
+
+.btn-hover:hover {
+  border-color: #f9fafb;
+}
+
+@media (max-width: 1024px) {
+  .traslator-section {
+    grid-template-columns: 1fr;
+    width: 85rem;
+    height: 60rem;
+  }
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 52.5%;
+  }
+
+  .bg-color {
+    height: 60rem;
+  }
+
+  .logo-image {
+    top: 4rem;
+  }
+
+  .traslator-section {
+    grid-template-columns: 1fr;
+    top: 15rem;
+    width: 70rem;
+    height: 60rem;
+  }
+}
+
+@media (max-width: 30em) {
+  html {
+    font-size: 52.5%;
+  }
+
+  .logo-image {
+    top: 6rem;
+  }
+
+  .bg-color {
+    height: 85vh;
+  }
+
+  .traslator-section {
+    grid-template-columns: 1fr;
+    top: 15rem;
+    width: 47rem;
+    height: 65rem;
+  }
 }
